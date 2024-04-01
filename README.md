@@ -21,7 +21,7 @@ bun dev
 Lastly open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## About
-This is a project made using Next.js (a server-side rendering framework of React) and tailwinc.css (a tool that makes inline css very efficient to use).
+This is a project made using Next.js (a server-side rendering framework of React) and tailwind.css (a tool that makes inline css very efficient to use).
 
 The code is commented and organized. Files of note with most of my code include page.js inside fo the community folder, footer.js in the components folder, and layout.js in the app folder.
 

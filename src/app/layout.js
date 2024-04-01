@@ -3,11 +3,6 @@ import "./globals.css"; // allows the use of tailwinc.css
 import Footer from "./components/footer"; // imports the footer component
 
 
-export const metadata = {
-  title: "Birth By Us Assessment",
-  description: "Created by Ayman Noreldaim",
-};
-
 export default function RootLayout({ children }) {
   /*
   This function is responsible for rendering the layout of the website.
