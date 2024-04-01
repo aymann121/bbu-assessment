@@ -7,8 +7,6 @@ Link: https://bbu-assessment.vercel.app/community
 
 Download the source code and run the development server using these commands:
 
-Next, run the development server:
-
 ```bash
 npm run dev
 # or
