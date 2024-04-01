@@ -8,7 +8,7 @@ export default function Head() {
         <title>BBU Takehome Website</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta name="description" content="Generated with create next app, created by Ayman Noreldaim" />
-        <link rel="icon" href="./favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </>
     )
 }
