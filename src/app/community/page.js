@@ -1,4 +1,3 @@
-
 //All of the imports
 import juliesmom_propic from '../technical-takehome-bbu/photos/juliesmom_propic.jpg'
 import momma2be_propic from '../technical-takehome-bbu/photos/momma2be_propic.jpg'
@@ -11,7 +10,12 @@ import Link from 'next/link'
 
 
 export default function Page() {
-    return (<div className = " mb-10 ml-10 pt-10 mr-10 ">
+    /*
+    This function is responsible for rendering the community page.
+    Contains text, posts, and the terms of service on the bottom of the page.
+    */
+    return (
+            <div className = " mb-10 ml-10 pt-10 mr-10 ">
                 <div className = "font-bold text-[#560000] text-4xl"> Community</div>
                 <div className="text-[#8f4f3f] italic font-mono mt-3"> Connection is the heartbeat of our lives; we are stronger together!</div>
                 <Posts className = ""/>
@@ -24,15 +28,11 @@ export default function Page() {
                         For the full Birth By Us Terms of Service, click <Link href = "./insights">here</Link>.
                     </div>
                 </div>
-            </div>)
-
+            </div>
+            )
 }
 
-let styles = {
-    k:"0",
-    height: "calc(100% - 16rem)",
-    overflowY: "scroll"
-}
+// these are the loaded images made into an object
 let images = {
     "juliesmom_propic.jpg": juliesmom_propic,
     "momma2be_propic.jpg": momma2be_propic,
@@ -41,6 +41,12 @@ let images = {
 }
 
 function Post(props){
+    /*
+    This function is responsible for rendering a single post in the community page,
+    it takes the content of the post and the id of the user who posted it.
+    */
+
+    //get the date of the post, format it, and add one day to it (because the JS Date object is weird)
     let newFormatDate = new Date(props.date)
     newFormatDate.setDate(newFormatDate.getDate() + 1)
     let day = newFormatDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
@@ -61,8 +67,12 @@ function Post(props){
     )
 }
 function Posts() {
-    // console.log(posts)
-    //sort the posts by date radix sort
+    /*
+    This function is responsible for rendering the posts in the community page,
+    it takes the posts from the posts.json file and sorts them by date.
+    */
+
+    //sort the posts by date by telling the sort function to compare the dates and how to do it
     posts.sort((a,b) => {
         let dateA = a.date.split("-")
         let dateB = b.date.split("-")
@@ -75,8 +85,9 @@ function Posts() {
         return dateA[2] - dateB[2]
     })
     return (
-        <div style = {styles} className=" mt-4  flex flex-col space-y-4 ">
+        <div className=" mt-4 flex flex-col space-y-4 ">
             {posts.map((message) => {
+                // for each post, create a Post component and pass the content
                 return <Post key = {Math.random()} content = {message.content}  id = {message.id} date = {message.date} />
             })}
         </div>
