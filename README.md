@@ -25,4 +25,4 @@ This is a project made using Next.js (a server-side rendering framework of React
 
 The code is commented and organized. Files of note with most of my code include page.js inside fo the community folder, footer.js in the components folder, and layout.js in the app folder.
 
-- Ayman Noreldaim
+~ Ayman Noreldaim
