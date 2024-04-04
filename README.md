@@ -5,9 +5,15 @@ Link: https://bbu-assessment.vercel.app/community
 
 ## Secondly, if you want to run it as a developer
 
-Download the source code and run the development server using these commands:
+Download the source code, download the dependencies, and run the development server using these commands:
 
 ```bash
+git clone https://github.com/aymann121/bbu-assessment
+
+cd bbu_assessment
+
+npm i
+
 npm run dev
 # or
 yarn dev
